@@ -1,4 +1,6 @@
-import { For, Heading, Stack, createListCollection } from "@chakra-ui/react";
+"use client";
+
+import { Stack, createListCollection } from "@chakra-ui/react";
 import {
   SelectContent,
   SelectItem,
@@ -6,17 +8,20 @@ import {
   SelectRoot,
   SelectTrigger,
   SelectValueText,
-} from "../../../components/ui/select";
+} from "./ui/select";
+
+const frameworks = createListCollection({
+  items: [
+    { label: "React.js", value: "react" },
+    { label: "Vue.js", value: "vue" },
+    { label: "Angular", value: "angular" },
+    { label: "Svelte", value: "svelte" },
+  ],
+});
 
 export function Select() {
-  const frameworks = createListCollection({
-    items: [
-      { label: "React.js", value: "react" },
-      { label: "Vue.js", value: "vue" },
-      { label: "Angular", value: "angular" },
-      { label: "Svelte", value: "svelte" },
-    ],
-  });
+  console.log("called");
+
   return (
     <Stack m="2" gap="5" width="320px">
       <SelectRoot collection={frameworks}>

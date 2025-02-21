@@ -2,6 +2,7 @@
 
 import { Box, Button, Center } from "@chakra-ui/react";
 import { useState } from "react";
+import { Select } from "../../../components/select";
 
 export function ClientComponent() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ export function ClientComponent() {
           <Center w="10px" h="10px" bg="blue.500" color="white" p="20">
             {count}
           </Center>
+          <Select />
         </Box>
       </div>
     </div>
